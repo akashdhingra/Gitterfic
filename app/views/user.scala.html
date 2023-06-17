@@ -1,0 +1,23 @@
+@(user: String)
+
+@main("Gitterific Users") {
+    <div class="d-flex justify-content-center bg-info bg-opacity-50 mb-3" style="padding: 10px;">
+        <h1>User Profile</h1>
+    </div>
+    <hr/>
+    <div class="row" style="margin: 0px 10px;">
+        <div class="col-sm-12" id="commitDiv">
+            <h2>User- <span id="userName"></span></h2>
+            <h6>Follower - <span id="followers"></span></h6>
+            <h7>Following - <span id="following"></span></h7><br>
+            <h8>Email - <span id="userEmail"></span></h8><br>
+            <h9>Location - <span id="location"></span></h9><br>
+            <h10>Repositories - </h10><br>
+        </div>
+        <div class="col-sm-12" id="userDiv">
+        </div>
+    </div>
+    <script type="text/javascript">
+        user('@user');
+    </script>
+}

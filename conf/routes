@@ -1,0 +1,31 @@
+# Routes
+# This file defines all application routes (Higher priority routes first)
+# ~~~~
+
+# An example controller showing a sample home page
+GET     /                           controllers.HomeController.index
+GET     /users/:name				controllers.HomeController.viewUser(name: String)
+GET     /repos/:owner/:repo			controllers.HomeController.viewRepository(owner: String, repo: String)
+GET     /search/repository/:keyword                           controllers.HomeController.searchRepository(keyword: String)
+
+#Returns websocket connection for searching repositories by keyword
+GET		/getRepositoriesBySearchViaWebSocket			controllers.HomeController.getRepositoriesBySearchViaWebSocket()
+
+#Returns websocket connection for searching repositories by keyword
+GET		/getRepositoryDetailViaWebSocket			controllers.HomeController.getRepositoryDetailViaWebSocket()
+
+#Returns websocket connection for searching repositories by keyword
+GET		/getUserDetailViaWebSocket			controllers.HomeController.getUserDetailViaWebSocket()
+
+#Returns websocket connection for displaying issues of a repository
+GET		/getIssueDetailViaWebSocket			controllers.HomeController.getIssueDetailViaWebSocket()
+
+#Returns websocket connection for searching repositories by keyword
+GET		/getCommitDetailViaWebSocket			controllers.HomeController.getCommitDetailViaWebSocket()
+
+GET     /repos/:owner/:repo/commits                           controllers.HomeController.viewCommits(owner: String, repo: String)
+# Map static resources from the /public folder to the /assets URL path
+GET     /assets/*file               controllers.Assets.versioned(file)
+
+GET		/home					controllers.HomeController.index
+GET 	/repos/:owner/:repo/issues  controllers.HomeController.viewIssues(owner: String, repo: String)

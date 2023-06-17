@@ -1,0 +1,23 @@
+@(owner: String, repo: String)
+
+@main("Gitterific Issues") {
+    <div class="d-flex justify-content-center bg-info bg-opacity-50 mb-3" style="padding: 10px;">
+        <h1>Issues</h1>
+    </div>
+    <hr/>
+    <div class="row" style="margin: 0px 10px;">
+        <div class="col-sm-12">
+            <h3>Issue Lists:</h3>
+            <div id="issueDiv">
+            </div>
+        </div>
+        <div class="col-sm-12" id="commitDiv">
+            <h3>Word Frequency:</h3>
+            <div class="col-sm-12" id="wordStatsDiv">
+            </div>
+        </div>
+    </div>
+    <script type="text/javascript">
+        issue('@owner','@repo');
+    </script>
+}

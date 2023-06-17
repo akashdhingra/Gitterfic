@@ -1,0 +1,12 @@
+@(owner: String, repository: String)
+@main("Gitterific Commits") {
+    <div class="d-flex justify-content-center bg-info bg-opacity-50 mb-3" style="padding: 10px;">
+        <h1>Commit Statistics of <a href="http://localhost:9000/repos/@owner/@repository">@repository Repository</a></h1>
+    </div>
+    <br/>
+    <div class="row" style="margin: 0px 10px;" id="commitDiv">
+    </div>
+    <script type="text/javascript">
+        commits('@owner', '@repository');
+    </script>
+}

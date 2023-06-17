@@ -1,0 +1,44 @@
+@(owner: String, repo: String)
+
+@main("Repository Result"){
+    <div class="d-flex justify-content-center bg-info bg-opacity-50 mb-3" style="padding: 10px;">
+        <h1>Repository Profile</a></h1>
+    </div>
+    <br/>
+    <div class="row" style="margin:0px 10px;">
+        <div>
+            <center>
+                <table class="table table-bordered">
+                    <tr class="bg-info text-center" style="font-size: 1.3rem;">
+                        <th>Name of Repository</th>
+                        <th>Username</th>
+                        <th>Issue Link</th>
+                        <th>Commit Link</th>
+                    </tr>
+                    <tr class="text-center" style="font-size: 1.1rem;">
+                        <td id="repoName"></td>
+                        <td id="userName"></td>
+                        <td id="issueLink"></td>
+                        <td id="commitLink"></td>
+                    </tr>
+                </table>
+            </center>
+            <div>
+                <h1>Issues List</h1>
+            </div>
+            <table class="table table-bordered">
+                <thead>
+                    <tr class="bg-info text-center" style="font-size: 1.3rem;">
+                        <th>Username</th>
+                        <th>Title of the Issue</th>
+                    </tr>
+                </thead>
+                <tbody id="issueTable">
+                </tbody>
+            </table>
+        </div>
+    </div>
+    <script type="text/javascript">
+        repository('@owner', '@repo');
+    </script>
+}
